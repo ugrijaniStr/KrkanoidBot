@@ -8,23 +8,12 @@ from colorama import Fore
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound
 from numpy import random
-
 import host
 
-###############################################
-#                                             #
-#                   VARIJABLE                 #
-#                                             #
-###############################################
+
 INFO = Fore.BLUE + "[" + Fore.YELLOW + "INFO" + Fore.BLUE + "] " + Fore.WHITE
 ERROR = Fore.BLUE + "[" + Fore.YELLOW + "ERROR" + Fore.BLUE + "] " + Fore.RED
 WARNING = Fore.BLUE + "[" + Fore.YELLOW + "WARNING" + Fore.BLUE + "] " + Fore.YELLOW
-
-###############################################
-#                                             #
-#                   INTENTS                   #
-#                                             #
-###############################################
 
 
 intents = discord.Intents.default()
@@ -33,13 +22,6 @@ intents.presences = True
 client = commands.Bot(command_prefix="$", intents=intents)
 client.remove_command('help')
 test_mute = []
-
-
-###############################################
-#                                             #
-#                   CLIEN EVENTI              #
-#                                             #
-###############################################
 
 
 @client.event
@@ -121,11 +103,6 @@ async def on_member_remove(member):
 #        await ctx.process_message(message)
 
 
-###############################################
-#                                             #
-#              CLIENT KOMANDE                 #
-#                                             #
-###############################################
 @client.command()
 async def invites(ctx):
     embed = discord.Embed(
