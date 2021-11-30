@@ -147,7 +147,7 @@ async def invites(ctx):
 
 @client.command()
 async def bestija(ctx):
-    lines = open('bestija.txt').read().splitlines()
+    lines = open('./text/bestija.txt').read().splitlines()
     ran = random.choice(lines)
     embed = discord.Embed(
         colour=discord.Colour.blue()
@@ -167,7 +167,7 @@ async def penis(ctx, member: discord.Member):
         colour=discord.Colour.red()
     )
 
-    ln = open('ps.txt').read().splitlines()
+    ln = open('./text/ps.txt').read().splitlines()
     velicina = random.choice(ln)
 
     embed.add_field(name=f"{member.name} penis: ", value=velicina, inline=False)
